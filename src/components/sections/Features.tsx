@@ -1,6 +1,33 @@
+import Image from 'next/image';
+import { ContainerScroll } from '../ui/container-scroll-animation';
+import mgDash from '@/assets/mgdash.png';
+
 const Features = () => {
   return (
-    <section id='features' className='bg-black'>
+    <section id='features' className='bg-neutral-950'>
+      <div className='flex flex-col overflow-hidden'>
+        <ContainerScroll
+          titleComponent={
+            <>
+              {/* <h2 className='text-4xl font-semibold text-white dark:text-white'>
+                A Smarter <br />
+                <span className='text-4xl md:text-[6rem] font-bold mt-1 leading-none'>
+                  Set of Tools
+                </span>
+              </h2> */}
+            </>
+          }
+        >
+          <Image
+            src={mgDash}
+            alt='hero'
+            height={720}
+            width={1400}
+            className='mx-auto rounded-2xl object-cover h-full object-top'
+            draggable={false}
+          />
+        </ContainerScroll>
+      </div>
       <h2>A Smarter Set of Tools</h2>
       <p>
         MoneyG.ro comes with a library of easy-to-use tools to keep you (and
