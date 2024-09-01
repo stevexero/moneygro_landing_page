@@ -1,6 +1,6 @@
 const Features = () => {
   return (
-    <div>
+    <section id='features' className='bg-black'>
       <h2>A Smarter Set of Tools</h2>
       <p>
         MoneyG.ro comes with a library of easy-to-use tools to keep you (and
@@ -71,7 +71,7 @@ const Features = () => {
           <p>Track your net worth...</p>
         </li>
       </ul>
-    </div>
+    </section>
   );
 };
 

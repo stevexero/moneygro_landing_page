@@ -12,7 +12,7 @@ const Pricing = () => {
   });
   const [timeFrame, setTimeFrame] = useState('monthly');
 
-  const handleRadio = (e) => {
+  const handleRadio = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTimeFrame(e.target.id);
     if (e.target.id === 'monthly') {
       setPrice({ ...price, personal: 15, family: 25 });
@@ -31,7 +31,7 @@ const Pricing = () => {
   };
 
   return (
-    <div>
+    <section id='pricing'>
       <h2>Simple Pricing</h2>
       <p>
         With plans to fit your needs, our tools are an investment in your
@@ -91,7 +91,7 @@ const Pricing = () => {
           <>That&apos;s {discount.family} per month!</>
         ) : null}
       </div>
-    </div>
+    </section>
   );
 };
 
