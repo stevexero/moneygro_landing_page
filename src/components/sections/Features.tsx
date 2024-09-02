@@ -1,6 +1,9 @@
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { ContainerScroll } from '../ui/container-scroll-animation';
 import mgDash from '@/assets/mgdash.png';
+import { LampContainer } from '../ui/lamp';
+import { Highlight } from '../ui/hero-highlight';
 
 const Features = () => {
   return (
@@ -28,7 +31,21 @@ const Features = () => {
           />
         </ContainerScroll>
       </div>
-      <h2>A Smarter Set of Tools</h2>
+      <LampContainer className='-mt-72'>
+        <motion.h2
+          initial={{ opacity: 0.5, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: 'easeInOut',
+          }}
+          className='mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl'
+        >
+          A <Highlight className='text-white'>Smarter</Highlight> Set of <br />
+          Budgeting <Highlight className='text-white'>Tools</Highlight>
+        </motion.h2>
+      </LampContainer>
       <p>
         MoneyG.ro comes with a library of easy-to-use tools to keep you (and
         your family) on the right track.

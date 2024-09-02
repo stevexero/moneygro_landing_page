@@ -1,9 +1,11 @@
 import { BackgroundBeams } from '../ui/background-beams';
+import { FlipWords } from '../ui/flip-words';
 import { Button } from '../ui/moving-border';
 import TextGradient from '../ui/text-gradient';
-import { TextHoverEffect } from '../ui/text-hover-effect';
 
 const Hero = () => {
+  const words = ['Elevate', 'Transform', 'Expand'];
+
   return (
     <section
       id='hero'
@@ -16,7 +18,8 @@ const Hero = () => {
           data-br=':r1a2:'
           data-brr='1'
         >
-          Elevate Your <TextGradient>Money Mindset</TextGradient> with MoneyG.ro
+          <FlipWords words={words} />
+          Your <TextGradient>Money Mindset</TextGradient> with MoneyG.ro
         </span>
       </h1>
       <p className='text-neutral-200 max-w-md mx-auto my-16 text-center relative z-10 px-8 sm:px-0'>
