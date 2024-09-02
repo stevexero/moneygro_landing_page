@@ -10,6 +10,7 @@ import plaid from '@/assets/plaid.png';
 import customJar from '@/assets/customJar.png';
 import ai from '@/assets/ai.png';
 import chart from '@/assets/chart.png';
+import { HoverEffect } from '../ui/card-hover-effect';
 
 const content = [
   {
@@ -94,6 +95,46 @@ const content = [
   },
 ];
 
+export const features = [
+  {
+    title: 'Smart Registers',
+    description:
+      'Manage all of your registers individually or as a single main register.',
+  },
+  {
+    title: 'Syncing',
+    description: 'Share all real-time information amongst your group',
+  },
+  {
+    title: 'Challenges / Goals and Milestones',
+    description: 'Gamify your money habits by setting and acheiving goals.',
+  },
+  {
+    title: 'Insights / Health Reports',
+    description: 'Track and view your budget habits.',
+  },
+  {
+    title: 'Rebalance',
+    description: 'Implement new budget habits based on past habits.',
+  },
+  {
+    title: 'Social Accountability',
+    description: 'Share your progress and inspire others.',
+  },
+  {
+    title: 'Forecasting',
+    description: 'Project future finances.',
+  },
+  {
+    title: 'Widgets',
+    description: 'Customize your dashboard',
+  },
+  {
+    title: 'Net Worth Tracking',
+    description: 'Track your network.',
+  },
+];
+
 const Features = () => {
   return (
     <section id='features' className='bg-neutral-950'>
@@ -140,67 +181,9 @@ const Features = () => {
       <div className='px-10 sm:px-40'>
         <StickyScroll content={content} />
       </div>
-      <ul>
-        <li>
-          <h3>Easy Registers</h3>
-          <p>
-            Manage all of your registers individually or as a single main
-            register...
-          </p>
-        </li>
-        <li>
-          <h3>Syncing</h3>
-          <p>Share in real time...</p>
-        </li>
-        <li>
-          <h3>Challenges</h3>
-          <p>Setting goals...</p>
-        </li>
-        <li>
-          <h3>Customization</h3>
-          <p>Add deductions, custom jars...</p>
-        </li>
-        <li>
-          <h3>Insights</h3>
-          <p>Daily tips...</p>
-        </li>
-        <li>
-          <h3>Automated</h3>
-          <p>Integrate with bank...</p>
-        </li>
-        <li>
-          <h3>AI Assistance</h3>
-          <p>Virtual financial coach</p>
-        </li>
-        <li>
-          <h3>Health Report</h3>
-          <p>Monthly report...</p>
-        </li>
-        <li>
-          <h3>Goals and Milestones</h3>
-          <p>Set goals...</p>
-        </li>
-        <li>
-          <h3>Rebalancing</h3>
-          <p>Based on prior habits...</p>
-        </li>
-        <li>
-          <h3>Social Accountability</h3>
-          <p>Share progres...</p>
-        </li>
-        <li>
-          <h3>Forecasting</h3>
-          <p>Project future finances...</p>
-        </li>
-        <li>
-          <h3>Customizable Widgets</h3>
-          <p>Make your dashboard your own...</p>
-        </li>
-        <li>
-          <h3>Net Worth Tracking</h3>
-          <p>Track your net worth...</p>
-        </li>
-      </ul>
+      <div className='max-w-5xl mx-auto px-8 mt-32'>
+        <HoverEffect items={features} />
+      </div>
     </section>
   );
 };
