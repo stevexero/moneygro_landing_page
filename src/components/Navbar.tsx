@@ -127,7 +127,9 @@ const Navbar = () => {
           <Link href='#pricing'>Pricing</Link>
         </li>
         <li className='ml-8'>Blog</li>
-        <li className='ml-8'>Contact</li>
+        <li className='ml-8'>
+          <Link href='#contact'>Contact</Link>
+        </li>
       </ul>
       <ul className='flex flex-row items-center'>
         <li className='mr-8'>

@@ -119,7 +119,7 @@ const Pricing = () => {
             </p>
           </form>
         </div>
-        <div className='mx-auto mt-4 md:mt-20 grid relative z-20 grid-cols-1 gap-4 items-center  md:grid-cols-2 xl:grid-cols-4'>
+        <div className='mx-auto mt-20 grid relative z-20 grid-cols-1 gap-4 items-center md:grid-cols-2 xl:grid-cols-4'>
           <div className='bg-black rounded-lg px-6 py-8 sm:mx-8 lg:mx-0 h-full flex flex-col justify-between'>
             <div>
               <h3 className='text-muted-dark text-base font-semibold leading-7'>
@@ -162,7 +162,7 @@ const Pricing = () => {
                   Smart Registers
                 </li>
               </ul>
-              <button className='p-[3px] relative bg-black z-10 md:text-sm transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10 block w-full'>
+              <button className='p-[3px] relative bg-black z-10 md:text-sm transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 mt-10 block w-full'>
                 <div className='absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg' />
                 <div className='px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent'>
                   Get Started
@@ -247,7 +247,7 @@ const Pricing = () => {
                   One Customizable Deduction
                 </li>
               </ul>
-              <button className='p-[3px] relative bg-black z-10 md:text-sm transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10 block w-full'>
+              <button className='p-[3px] relative bg-black z-10 md:text-sm transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 mt-10 block w-full'>
                 <div className='absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg' />
                 <div className='px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent'>
                   Get Started
@@ -349,7 +349,7 @@ const Pricing = () => {
                   Unlimited Deductions
                 </li>
               </ul>
-              <button className='p-[3px] relative bg-black z-10 md:text-sm transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10 block w-full'>
+              <button className='p-[3px] relative bg-black z-10 md:text-sm transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 mt-10 block w-full'>
                 <div className='absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg' />
                 <div className='px-8 py-2 rounded-[6px] relative group transition duration-200 text-white hover:scale-110'>
                   Get Started
@@ -406,7 +406,7 @@ const Pricing = () => {
                   Syncing
                 </li>
               </ul>
-              <button className='p-[3px] relative bg-black z-10 md:text-sm transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10 block w-full'>
+              <button className='p-[3px] relative bg-black z-10 md:text-sm transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 mt-10 block w-full'>
                 <div className='absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg' />
                 <div className='px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent'>
                   Get Started

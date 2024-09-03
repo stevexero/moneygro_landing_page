@@ -184,7 +184,7 @@ const Features = () => {
       <div className='px-10 sm:px-40'>
         <StickyScroll content={content} />
       </div>
-      <div className='max-w-5xl mx-auto px-8 mt-32'>
+      <div className='max-w-5xl mx-auto px-8 -mt-8 sm:mt-32'>
         <HoverEffect items={features} />
       </div>
     </section>
