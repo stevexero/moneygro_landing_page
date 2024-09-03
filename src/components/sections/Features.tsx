@@ -137,7 +137,7 @@ export const features = [
 
 const Features = () => {
   return (
-    <section id='features' className='bg-neutral-950'>
+    <section className='bg-neutral-950'>
       <div className='flex flex-col overflow-hidden'>
         <ContainerScroll titleComponent={<></>}>
           <Image
@@ -150,34 +150,37 @@ const Features = () => {
           />
         </ContainerScroll>
       </div>
-      <LampContainer className='-mt-72'>
-        <motion.h2
-          initial={{ opacity: 0.5, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: 'easeInOut',
-          }}
-          className='mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl'
-        >
-          A <Highlight className='text-white'>Smarter</Highlight> Set of <br />
-          Budgeting <Highlight className='text-white'>Tools</Highlight>
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: 'easeInOut',
-          }}
-          className='text-neutral-200 max-w-md mx-auto my-16 text-center relative z-10 px-8 sm:px-0'
-        >
-          MoneyG.ro comes with a library of easy-to-use tools to keep you (and
-          your family) on the right track.
-        </motion.p>
-      </LampContainer>
+      <div id='features'>
+        <LampContainer className='-mt-72'>
+          <motion.h2
+            initial={{ opacity: 0.5, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.3,
+              duration: 0.8,
+              ease: 'easeInOut',
+            }}
+            className='mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl'
+          >
+            A <Highlight className='text-white'>Smarter</Highlight> Set of{' '}
+            <br />
+            Budgeting <Highlight className='text-white'>Tools</Highlight>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              delay: 0.3,
+              duration: 0.8,
+              ease: 'easeInOut',
+            }}
+            className='text-neutral-200 max-w-md mx-auto my-16 text-center relative z-10 px-8 sm:px-0'
+          >
+            MoneyG.ro comes with a library of easy-to-use tools to keep you (and
+            your family) on the right track.
+          </motion.p>
+        </LampContainer>
+      </div>
       <div className='px-10 sm:px-40'>
         <StickyScroll content={content} />
       </div>
