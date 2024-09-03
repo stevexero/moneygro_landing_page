@@ -11,12 +11,25 @@ import {
   ModalTrigger,
   useModal,
 } from './ui/animated-modal';
+import Login from './Login';
+import SignUp from './SignUp';
 
 const Navbar = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 800px)' });
   const router = useRouter();
 
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleNavLinkClick = (hash: string) => {
+    if (router.pathname !== '/') {
+      router.push(`/${hash}`);
+    } else {
+      const element = document.getElementById(hash.replace('#', ''));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,17 +42,6 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  const handleNavLinkClick = (hash: string) => {
-    if (router.pathname !== '/') {
-      router.push(`/${hash}`);
-    } else {
-      const element = document.getElementById(hash.replace('#', ''));
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
 
   const ModalLinks = () => {
     const { setOpen } = useModal();
@@ -125,65 +127,91 @@ const Navbar = () => {
     );
   }
 
+  const modalSignUp = () => {
+    // const { setOpen } = useModal();
+
+    return <h1>Sign Up</h1>;
+  };
+
   return (
-    <nav
-      className={`fixed top-5 inset-x-0 w-full mx-auto z-50 ${
-        isScrolled
-          ? 'bg-black max-w-4xl shadow shadow-slate-500'
-          : 'bg-transparent max-w-7xl'
-      } text-white transition-all duration-700 ease-in-out flex flex-row items-center justify-between px-8 py-4 rounded-2xl`}
-    >
-      <ul className='flex flex-row items-center'>
-        <li className='flex flex-row items-center'>
-          <GrMoney size='1.5rem' className='text-pink-400' />
-          <Link
-            href={router.pathname !== '/' ? '/#hero' : '#hero'}
-            onClick={() => handleNavLinkClick('#hero')}
-            className='font-bold'
-          >
-            &nbsp;Money
-            <span className='text-cyan-400'>
-              G<span className='text-pink-400'>.</span>ro
-            </span>
-          </Link>
-        </li>
-        <li className='ml-16'>
-          <Link
-            href={router.pathname !== '/' ? '/#features' : '#features'}
-            onClick={() => handleNavLinkClick('#features')}
-          >
-            Features
-          </Link>
-        </li>
-        <li className='ml-8'>
-          <Link
-            href={router.pathname !== '/' ? '/#pricing' : '#pricing'}
-            onClick={() => handleNavLinkClick('#pricing')}
-          >
-            Pricing
-          </Link>
-        </li>
-        <li className='ml-8'>
-          <Link href='/blog'>Blog</Link>
-        </li>
-        <li className='ml-8'>
-          <Link href='#contact'>Contact</Link>
-        </li>
-      </ul>
-      <ul className='flex flex-row items-center'>
-        <li className='mr-8'>
-          <button>Login</button>
-        </li>
-        <li>
-          <button className='p-[3px] relative bg-black z-10 md:text-sm transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 block w-full'>
-            <div className='absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full' />
-            <div className='px-8 py-2 rounded-[6px] relative group transition duration-200 text-white hover:scale-110'>
-              Sign Up
-            </div>
-          </button>
-        </li>
-      </ul>
-    </nav>
+    <>
+      <nav
+        className={`fixed top-5 inset-x-0 w-full mx-auto z-50 ${
+          isScrolled
+            ? 'bg-black max-w-4xl shadow shadow-slate-500'
+            : 'bg-transparent max-w-7xl'
+        } text-white transition-all duration-700 ease-in-out flex flex-row items-center justify-between px-8 py-4 rounded-2xl`}
+      >
+        <ul className='flex flex-row items-center'>
+          <li className='flex flex-row items-center'>
+            <GrMoney size='1.5rem' className='text-pink-400' />
+            <Link
+              href={router.pathname !== '/' ? '/#hero' : '#hero'}
+              onClick={() => handleNavLinkClick('#hero')}
+              className='font-bold'
+            >
+              &nbsp;Money
+              <span className='text-cyan-400'>
+                G<span className='text-pink-400'>.</span>ro
+              </span>
+            </Link>
+          </li>
+          <li className='ml-16'>
+            <Link
+              href={router.pathname !== '/' ? '/#features' : '#features'}
+              onClick={() => handleNavLinkClick('#features')}
+            >
+              Features
+            </Link>
+          </li>
+          <li className='ml-8'>
+            <Link
+              href={router.pathname !== '/' ? '/#pricing' : '#pricing'}
+              onClick={() => handleNavLinkClick('#pricing')}
+            >
+              Pricing
+            </Link>
+          </li>
+          <li className='ml-8'>
+            <Link href='/blog'>Blog</Link>
+          </li>
+          <li className='ml-8'>
+            <Link href='#contact'>Contact</Link>
+          </li>
+        </ul>
+        <ul className='flex flex-row items-center'>
+          <li className='mr-8'>
+            <Modal>
+              <ModalTrigger>
+                <button>Login</button>
+              </ModalTrigger>
+              <ModalBody>
+                <ModalContent>
+                  <Login />
+                </ModalContent>
+              </ModalBody>
+            </Modal>
+          </li>
+          <li>
+            <Modal>
+              <ModalTrigger className='p-[3px] relative bg-black z-10 md:text-sm transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 block w-fullgroup/modal-btn'>
+                <button>
+                  <div className='absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full' />
+                  <div className='px-8 py-2 rounded-[6px] relative group transition duration-200 text-white hover:scale-110'>
+                    Sign Up
+                  </div>
+                </button>
+              </ModalTrigger>
+              <ModalBody>
+                <ModalContent>
+                  <SignUp />
+                </ModalContent>
+              </ModalBody>
+            </Modal>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 };
 
