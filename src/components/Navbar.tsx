@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useMediaQuery } from 'react-responsive';
 import { GrMoney } from 'react-icons/gr';
 import { TiThMenu } from 'react-icons/ti';
@@ -13,6 +14,7 @@ import {
 
 const Navbar = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 800px)' });
+  const router = useRouter();
 
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -28,29 +30,47 @@ const Navbar = () => {
     };
   }, []);
 
+  const handleNavLinkClick = (hash: string) => {
+    if (router.pathname !== '/') {
+      router.push(`/${hash}`);
+    } else {
+      const element = document.getElementById(hash.replace('#', ''));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   const ModalLinks = () => {
     const { setOpen } = useModal();
 
-    const handleLinkClick = () => {
-      setOpen(false); // Close the modal when a link is clicked
+    const handleLinkClick = (hash: string) => {
+      setOpen(false);
+      handleNavLinkClick(hash);
     };
 
     return (
       <ul className='mt-24 flex flex-col items-center'>
         <li className='mt-8'>
-          <Link href='#features' onClick={handleLinkClick}>
+          <Link
+            href={router.pathname !== '/' ? '/#features' : '#features'}
+            onClick={() => handleLinkClick('#features')}
+          >
             Features
           </Link>
         </li>
         <li className='mt-8'>
-          <Link href='#pricing' onClick={handleLinkClick}>
+          <Link
+            href={router.pathname !== '/' ? '/#pricing' : '#pricing'}
+            onClick={() => handleLinkClick('#pricing')}
+          >
             Pricing
           </Link>
         </li>
-        <li className='mt-8' onClick={handleLinkClick}>
-          <Link href='#blog'>Blog</Link>
+        <li className='mt-8' onClick={() => setOpen(false)}>
+          <Link href='/blog'>Blog</Link>
         </li>
-        <li className='mt-8' onClick={handleLinkClick}>
+        <li className='mt-8' onClick={() => setOpen(false)}>
           <Link href='#contact'>Contact</Link>
         </li>
       </ul>
@@ -67,7 +87,10 @@ const Navbar = () => {
         >
           <div className='flex flex-row items-center'>
             <GrMoney size='1.5rem' className='text-pink-400' />
-            <Link href='#hero' className='font-bold'>
+            <Link
+              href={router.pathname !== '/' ? '/#hero' : '#hero'}
+              className='font-bold'
+            >
               &nbsp;Money
               <span className='text-cyan-400'>
                 G<span className='text-pink-400'>.</span>ro
@@ -113,7 +136,11 @@ const Navbar = () => {
       <ul className='flex flex-row items-center'>
         <li className='flex flex-row items-center'>
           <GrMoney size='1.5rem' className='text-pink-400' />
-          <Link href='#hero' className='font-bold'>
+          <Link
+            href={router.pathname !== '/' ? '/#hero' : '#hero'}
+            onClick={() => handleNavLinkClick('#hero')}
+            className='font-bold'
+          >
             &nbsp;Money
             <span className='text-cyan-400'>
               G<span className='text-pink-400'>.</span>ro
@@ -121,12 +148,24 @@ const Navbar = () => {
           </Link>
         </li>
         <li className='ml-16'>
-          <Link href='#features'>Features</Link>
+          <Link
+            href={router.pathname !== '/' ? '/#features' : '#features'}
+            onClick={() => handleNavLinkClick('#features')}
+          >
+            Features
+          </Link>
         </li>
         <li className='ml-8'>
-          <Link href='#pricing'>Pricing</Link>
+          <Link
+            href={router.pathname !== '/' ? '/#pricing' : '#pricing'}
+            onClick={() => handleNavLinkClick('#pricing')}
+          >
+            Pricing
+          </Link>
         </li>
-        <li className='ml-8'>Blog</li>
+        <li className='ml-8'>
+          <Link href='/blog'>Blog</Link>
+        </li>
         <li className='ml-8'>
           <Link href='#contact'>Contact</Link>
         </li>
