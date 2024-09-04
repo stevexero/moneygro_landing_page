@@ -12,7 +12,6 @@ import {
   useModal,
 } from './ui/animated-modal';
 import Login from './Login';
-import SignUp from './SignUp';
 
 const Navbar = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 800px)' });
@@ -183,31 +182,25 @@ const Navbar = () => {
           <li className='mr-8'>
             <Modal>
               <ModalTrigger>
-                <button>Login</button>
+                <span>Login</span>
               </ModalTrigger>
-              <ModalBody>
-                <ModalContent>
+              <ModalBody className='items-center'>
+                <ModalContent className='w-full max-w-96'>
                   <Login />
                 </ModalContent>
               </ModalBody>
             </Modal>
           </li>
           <li>
-            <Modal>
-              <ModalTrigger className='p-[3px] relative bg-black z-10 md:text-sm transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 block w-fullgroup/modal-btn'>
-                <button>
-                  <div className='absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full' />
-                  <div className='px-8 py-2 rounded-[6px] relative group transition duration-200 text-white hover:scale-110'>
-                    Sign Up
-                  </div>
-                </button>
-              </ModalTrigger>
-              <ModalBody>
-                <ModalContent>
-                  <SignUp />
-                </ModalContent>
-              </ModalBody>
-            </Modal>
+            <Link
+              href='/demo'
+              className='p-[3px] relative bg-black z-10 md:text-sm transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 block w-fullgroup/modal-btn'
+            >
+              <div className='absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full' />
+              <div className='px-8 py-2 rounded-[6px] relative group transition duration-200 text-white hover:scale-110 font-bold'>
+                Demo
+              </div>
+            </Link>
           </li>
         </ul>
       </nav>

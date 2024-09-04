@@ -42,6 +42,9 @@ const Footer = () => {
                     <li className='mt-4'>
                       <Link href='#blog'>Blog</Link>
                     </li>
+                    <li className='mt-4'>
+                      <Link href='/demo'>Demo</Link>
+                    </li>
                   </ul>
                   <ul className='flex flex-row items-center mt-12'>
                     <li>
@@ -109,7 +112,10 @@ const Footer = () => {
         </div>
       </div>
       <p className='mb-12 text-neutral-500'>
-        Copyright &copy; MoneyG.ro by Steve Xero
+        Copyright &copy; MoneyG.ro by{' '}
+        <a href='https://stevexero.com' target='_blank'>
+          Steve Xero
+        </a>
       </p>
     </footer>
   );

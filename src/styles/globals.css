@@ -6,3 +6,34 @@ html {
   scroll-behavior: smooth;
   background-color: black;
 }
+
+.supabase-auth-ui_ui-divider {
+  display: none !important;
+}
+
+.supabase-auth-ui_ui-button {
+  @apply bg-gradient-to-br relative from-zinc-900 to-zinc-900 block bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset] !important;
+  max-width: 20rem !important;
+  align-self: center !important;
+}
+
+button.supabase-auth-ui_ui-button.c-bOcPnF.c-bOcPnF-iwjZXY-color-default
+  svg.c-eSSyNk {
+  @apply hidden !important;
+}
+
+button[type='submit'].supabase-auth-ui_ui-button.c-bOcPnF.c-bOcPnF-cmFMMs-color-primary {
+  @apply mt-8 !important;
+}
+
+label.supabase-auth-ui_ui-label.c-bpexlo {
+  @apply text-sm font-medium text-white leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 !important;
+}
+
+.supabase-auth-ui_ui-input {
+  @apply flex h-10 w-full border-none bg-zinc-800 text-white rounded-md px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral-600 focus-visible:outline-none focus-visible:ring-[2px] focus-visible:ring-neutral-600 disabled:cursor-not-allowed disabled:opacity-50 shadow-[0px_0px_1px_1px_var(--neutral-700)] group-hover/input:shadow-none transition duration-500 mt-2 !important;
+}
+
+div.supabase-auth-ui_ui-container.c-jTXIoq.c-jTXIoq-bsgKCL-direction-vertical.c-jTXIoq-bXHFxK-gap-large {
+  @apply mt-4 !important;
+}

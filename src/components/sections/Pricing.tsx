@@ -159,7 +159,7 @@ const Pricing = () => {
                   >
                     <path d='M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z'></path>
                   </svg>
-                  Smart Registers
+                  Single Register
                 </li>
               </ul>
               <button className='p-[3px] relative bg-black z-10 md:text-sm transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 mt-10 block w-full'>
@@ -214,7 +214,22 @@ const Pricing = () => {
                   >
                     <path d='M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z'></path>
                   </svg>
-                  Bank Integration
+                  Smart Registers
+                </li>
+                <li className='flex gap-x-3'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='24'
+                    height='24'
+                    viewBox='0 0 24 24'
+                    fill='currentColor'
+                    stroke='none'
+                    className='tabler-icon tabler-icon-circle-check-filled text-muted dark:text-muted-dark h-6 w-5 flex-none'
+                    aria-hidden='true'
+                  >
+                    <path d='M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z'></path>
+                  </svg>
+                  Net Worth Tracking
                 </li>
                 <li className='flex gap-x-3'>
                   <svg
@@ -316,7 +331,7 @@ const Pricing = () => {
                   >
                     <path d='M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z'></path>
                   </svg>
-                  Net Worth Tracking
+                  Bank Integration
                 </li>
                 <li className='flex gap-x-3'>
                   <svg
@@ -528,6 +543,9 @@ const Pricing = () => {
                         Smart Registers
                       </td>
                       <td className='whitespace-nowrap px-3 py-4 text-sm text-muted dark:text-muted-dark text-center'>
+                        <p>Simple</p>
+                      </td>
+                      <td className='whitespace-nowrap px-3 py-4 text-sm text-muted dark:text-muted-dark text-center'>
                         <svg
                           xmlns='http://www.w3.org/2000/svg'
                           width='24'
@@ -542,6 +560,47 @@ const Pricing = () => {
                         >
                           <path d='M5 12l5 5l10 -10'></path>
                         </svg>
+                      </td>
+                      <td className='whitespace-nowrap px-3 py-4 text-sm text-muted dark:text-muted-dark text-center'>
+                        <svg
+                          xmlns='http://www.w3.org/2000/svg'
+                          width='24'
+                          height='24'
+                          viewBox='0 0 24 24'
+                          fill='none'
+                          stroke='currentColor'
+                          strokeWidth='2'
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          className='tabler-icon tabler-icon-check mx-auto h-4 w-4 flex-shrink-0 text-white'
+                        >
+                          <path d='M5 12l5 5l10 -10'></path>
+                        </svg>
+                      </td>
+                      <td className='whitespace-nowrap px-3 py-4 text-sm text-muted dark:text-muted-dark text-center'>
+                        <svg
+                          xmlns='http://www.w3.org/2000/svg'
+                          width='24'
+                          height='24'
+                          viewBox='0 0 24 24'
+                          fill='none'
+                          stroke='currentColor'
+                          strokeWidth='2'
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          className='tabler-icon tabler-icon-check mx-auto h-4 w-4 flex-shrink-0 text-white'
+                        >
+                          <path d='M5 12l5 5l10 -10'></path>
+                        </svg>
+                      </td>
+                    </tr>
+                    {/*  */}
+                    <tr>
+                      <td className='whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-white sm:pl-0'>
+                        Net Worth Tracking
+                      </td>
+                      <td className='whitespace-nowrap px-3 py-4 text-sm text-muted dark:text-muted-dark text-center'>
+                        {/*  */}
                       </td>
                       <td className='whitespace-nowrap px-3 py-4 text-sm text-muted dark:text-muted-dark text-center'>
                         <svg
@@ -601,20 +660,7 @@ const Pricing = () => {
                         {/*  */}
                       </td>
                       <td className='whitespace-nowrap px-3 py-4 text-sm text-muted dark:text-muted-dark text-center'>
-                        <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          width='24'
-                          height='24'
-                          viewBox='0 0 24 24'
-                          fill='none'
-                          stroke='currentColor'
-                          strokeWidth='2'
-                          strokeLinecap='round'
-                          strokeLinejoin='round'
-                          className='tabler-icon tabler-icon-check mx-auto h-4 w-4 flex-shrink-0 text-white'
-                        >
-                          <path d='M5 12l5 5l10 -10'></path>
-                        </svg>
+                        {/*  */}
                       </td>
                       <td className='whitespace-nowrap px-3 py-4 text-sm text-muted dark:text-muted-dark text-center'>
                         <svg
@@ -653,50 +699,6 @@ const Pricing = () => {
                     <tr>
                       <td className='whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-white sm:pl-0'>
                         AI Assistance
-                      </td>
-                      <td className='whitespace-nowrap px-3 py-4 text-sm text-muted dark:text-muted-dark text-center'>
-                        {/*  */}
-                      </td>
-                      <td className='whitespace-nowrap px-3 py-4 text-sm text-muted dark:text-muted-dark text-center'>
-                        {/*  */}
-                      </td>
-                      <td className='whitespace-nowrap px-3 py-4 text-sm text-muted dark:text-muted-dark text-center'>
-                        <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          width='24'
-                          height='24'
-                          viewBox='0 0 24 24'
-                          fill='none'
-                          stroke='currentColor'
-                          strokeWidth='2'
-                          strokeLinecap='round'
-                          strokeLinejoin='round'
-                          className='tabler-icon tabler-icon-check mx-auto h-4 w-4 flex-shrink-0 text-white'
-                        >
-                          <path d='M5 12l5 5l10 -10'></path>
-                        </svg>
-                      </td>
-                      <td className='whitespace-nowrap px-3 py-4 text-sm text-muted dark:text-muted-dark text-center'>
-                        <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          width='24'
-                          height='24'
-                          viewBox='0 0 24 24'
-                          fill='none'
-                          stroke='currentColor'
-                          strokeWidth='2'
-                          strokeLinecap='round'
-                          strokeLinejoin='round'
-                          className='tabler-icon tabler-icon-check mx-auto h-4 w-4 flex-shrink-0 text-white'
-                        >
-                          <path d='M5 12l5 5l10 -10'></path>
-                        </svg>
-                      </td>
-                    </tr>
-                    {/*  */}
-                    <tr>
-                      <td className='whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-white sm:pl-0'>
-                        Net Worth Tracking
                       </td>
                       <td className='whitespace-nowrap px-3 py-4 text-sm text-muted dark:text-muted-dark text-center'>
                         {/*  */}
