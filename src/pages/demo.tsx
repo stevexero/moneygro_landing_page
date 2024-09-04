@@ -11,18 +11,18 @@ const demo = () => {
   return (
     <Layout>
       <div className='w-full flex items-start justify-center mb-8'>
-        <div className='w-full md:max-w-7xl px-8 mt-28 flex flex-col items-center'>
+        <div className='w-full md:max-w-7xl px-8 mt-28'>
           <h1 className='text-2xl md:text-4xl font-medium tracking-tight relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8 text-center'>
             Welcome to the MoneyG.ro Demo!
           </h1>
-          <div className='container flex flex-col items-center mt-12'>
+          <div className='flex flex-col items-center mt-12'>
             <AnimatedInput />
             <Presets />
 
             <div className='mt-8 w-full flex flex-col items-center'>
               <Deductions />
 
-              <div className='container w-full max-w-lg grid grid-cols-2 gap-4 mt-8'>
+              <div className='w-full max-w-lg grid grid-cols-2 gap-4 mt-8'>
                 <Jars />
                 <div className='card card-compact border border-neutral text-neutral-content rounded-xl'>
                   <div className='card-body'>
@@ -34,7 +34,7 @@ const demo = () => {
                         Get Full Access Now
                       </Button>
                     </div>
-                    <div className={'card-actions justify-end'}>{/*  */}</div>
+                    <div className={'card-actions justify-end'}></div>
                   </div>
                 </div>
                 {/* <CustomJars /> */}

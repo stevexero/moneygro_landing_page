@@ -214,7 +214,7 @@ const Presets: React.FC = () => {
   }, [jarInputs, category, fixedAmt]);
 
   return (
-    <div className='w-full max-w-md grid grid-cols-2 sm:grid-cols-3 gap-x-4 mt-6'>
+    <div className='w-full sm:max-w-md grid grid-cols-2 sm:grid-cols-3 gap-x-4 mt-6'>
       <div className='flex flex-row items-center ml-4 sm:ml-0'>
         <input
           className='radio radio-primary mr-2'

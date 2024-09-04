@@ -81,7 +81,7 @@ const AnimatedInput: React.FC = () => {
         min={0}
       />
       <span
-        className='absolute inset-y-0 right-0 flex items-center mr-8 tooltip tooltip-right'
+        className='absolute inset-y-0 right-0 flex items-center mr-8 tooltip'
         data-tip='Clear Salary'
       >
         <GrClose
