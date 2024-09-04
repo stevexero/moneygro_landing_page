@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -110,12 +112,15 @@ const Navbar = () => {
                     <button>Login</button>
                   </li>
                   <li className='mt-8'>
-                    <button className='p-[3px] relative bg-black z-10 md:text-sm transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 block w-full'>
+                    <Link
+                      href='/demo'
+                      className='p-[3px] relative bg-black z-10 md:text-sm transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 block w-fullgroup/modal-btn'
+                    >
                       <div className='absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full' />
-                      <div className='px-8 py-2 rounded-[6px] relative group transition duration-200 text-white hover:scale-110'>
-                        Sign Up
+                      <div className='px-8 py-2 rounded-[6px] relative group transition duration-200 text-white hover:scale-110 font-bold'>
+                        Demo
                       </div>
-                    </button>
+                    </Link>
                   </li>
                 </ul>
               </ModalContent>

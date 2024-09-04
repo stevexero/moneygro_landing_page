@@ -281,7 +281,7 @@ const Pricing = () => {
               <div>
                 <div className='absolute -bottom-5 text-xs font-light text-red-400'>
                   {timeFrame === 'yr' ? (
-                    <>That&apos;s {discount.personal} per month!</>
+                    <>That&apos;s {discount.personalPremium} per month!</>
                   ) : null}
                 </div>
               </div>
@@ -383,7 +383,7 @@ const Pricing = () => {
               <div>
                 <div className='absolute -bottom-5 text-xs font-light text-red-400'>
                   {timeFrame === 'yr' ? (
-                    <>That&apos;s {discount.personal} per month!</>
+                    <>That&apos;s {discount.familyPremium} per month!</>
                   ) : null}
                 </div>
               </div>
