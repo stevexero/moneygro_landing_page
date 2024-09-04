@@ -4,7 +4,17 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: black;
+  @apply bg-neutral-950 !important;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
 }
 
 .supabase-auth-ui_ui-divider {
